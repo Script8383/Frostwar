@@ -67,10 +67,12 @@ SubmitButton.MouseButton1Click:Connect(function()
     if TextBox.Text == Key then
         if game.PlaceId == 16732694052 then
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Script8383/Frostwar/refs/heads/main/RonixHubBooty.lua"))()
+                        ScreenGui:Destroy() -- Close the GUI after script is loaded
+
         else
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Script8383/Frostwar/refs/heads/main/Protected_9709560269650768.txt"))()
+                    ScreenGui:Destroy() -- Close the GUI after script is loaded
         end
-        ScreenGui:Destroy() -- Close the GUI after script is loaded
     else
         TextBox.Text = "Incorrect Key, Try Again."
         TextBox.TextColor3 = Color3.fromRGB(255, 0, 0) -- Red for error
