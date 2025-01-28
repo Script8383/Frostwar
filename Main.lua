@@ -65,7 +65,11 @@ end)
 -- Function to check the entered key and load the script
 SubmitButton.MouseButton1Click:Connect(function()
     if TextBox.Text == Key then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Script8383/Frostwar/refs/heads/main/Protected_9709560269650768.txt"))()
+        if game.PlaceId == 16732694052 then
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Script8383/Frostwar/refs/heads/main/RonixHubBooty.lua"))()
+        else
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Script8383/Frostwar/refs/heads/main/Protected_9709560269650768.txt"))()
+        end
         ScreenGui:Destroy() -- Close the GUI after script is loaded
     else
         TextBox.Text = "Incorrect Key, Try Again."
